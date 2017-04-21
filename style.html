@@ -360,6 +360,7 @@
 	</ul>
 	<div class="datu"><img src="images/song.jpg" alt=""></div>
 	<div class="cuo"><img src="images/close.png" alt=""></div>
+	<div class="all"></div>
 </body>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
@@ -399,15 +400,18 @@
 	var big = document.querySelectorAll('.zp');
 	var bt = document.querySelector('.datu img');
 	var cuo = document.querySelector('.cuo'); 
+	var all = document.querySelector('.all');
 	for(var k=0;k<big.length;k++){
 		big[k].onclick=function(){
 			bt.style.display='block';
 			cuo.style.display='block';
+			all.style.display='block';
 		}
 	}
 	cuo.onclick=function(){
 		bt.style.display='none';
 		cuo.style.display='none';
+		all.style.display='none';
 	}
 </script>
 </html>
