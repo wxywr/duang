@@ -15,9 +15,21 @@
 	</div>
 	<div class="feng">
 		<div><img src="images/01.png" alt=""></div>
-		<div><img src="images/02.png" alt=""></div>
 		<div><img src="images/03.png" alt=""></div>
+		<div><img src="images/02.png" alt=""></div>
 		<div class="last"><img src="images/04.png" alt=""></div>
+	</div>
+	<div class="djfc-list">
+		<div class="djfc-a lists">科技园区&互联网企业创业孵化器</div>
+		<div class="djfc-b lists">互联网企业公共服务</div>
+		<div class="djfc-c lists">互联网企业创新创业政策</div>
+		<div class="djfc-d lists">互联网企业党建服务品牌</div>
+	</div>
+	<div class="keji">
+		<div class="kejis">创业孵化器</div>
+		<div class="kejis kk">公共服务</div>
+		<div class="kejis kk">创新创业政策</div>
+		<div class="kejis kk">党建服务品牌</div>
 	</div>
 	<ul class="list">
 		<li><a href="index.html"><i class="a"></i>首页</a></li>
@@ -32,5 +44,18 @@
 		<li><a href="zhao.html"><i class="j"></i>感知拍照</a></li>
 	</ul>
 </body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script>
+	var feng = document.querySelectorAll('.feng div');
+	var list = document.querySelector('.djfc-list');
+	var ke = document.querySelector('.keji');
+	for(var i=0;i<feng.length;i++){
+		feng[i].onclick=function(){
+			list.style.display='block';
+			ke.style.display='block';
+		}
+	}
+</script>
 </html>

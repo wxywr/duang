@@ -3,7 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>党建地图</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/animate.css">
 </head>
 <body style="background-image: url(images/bg.jpg);">
 	<div class="time times">
@@ -13,6 +15,53 @@
 			<div class="time-under"></div>
 		</div>
 	</div>
+	<div class="map">
+		<div class="map-l animated bounceInLeft"><img src="images/qiye.png" alt=""><p>互联网企业党建地图</p></div>
+		<div class="map-r animated bounceInRight"><img src="images/wuj.png" alt=""><p>五角场街道党建地图</p></div>
+	</div>
+	<div class="map-list">
+		<div class="list-a mapp">互联网企业党建地图
+			<div class="ditu one">
+			    <div class="lun">
+			    	<div class="img">
+			    		<img src="images/qiye-01.jpg" alt="">
+			    		<img src="images/qiye-02.jpg" alt="">
+			    	</div>
+			    	<div class="btn">
+			    		<ul>
+			    			<li>正</li>
+			    			<li>反</li>
+			    		</ul>
+			    	</div>
+			    	<div class="jiao">
+			    		<div class="left"></div>
+			    		<div class="right"></div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+		<div class="list-b mapp">五角场街道党建地图
+			<div class="ditu two">
+				 <div class="lun">
+			    	<div class="img">
+			    		<img src="images/wu-01.jpg" alt="">
+			    		<img src="images/wu-02.jpg" alt="">
+			    	</div>
+			    	<div class="btn">
+			    		<ul>
+			    			<li>正</li>
+			    			<li>反</li>
+			    		</ul>
+			    	</div>
+			    	<div class="jiao">
+			    		<div class="left"></div>
+			    		<div class="right"></div>
+			    	</div>
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="map-bai"></div>
 	<ul class="list">
 		<li><a href="index.html"><i class="a"></i>首页</a></li>
 		<li><a href="style.html"><i class="b"></i>党建风采</a></li>
@@ -26,5 +75,31 @@
 		<li><a href="zhao.html"><i class="j"></i>感知拍照</a></li>
 	</ul>
 </body>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script>
+	var a = document.querySelectorAll('.map div');
+	var b = document.querySelector('.map-list');
+	var c = document.querySelector('.map-bai');
+	for(var i=0;i<a.length;i++){
+		a[i].onclick=function(){
+			b.style.display='block';
+			c.style.display='block';
+		}
+	}
+
+	var aa = document.querySelectorAll('.mapp');
+	var dd = document.querySelectorAll('.ditu');
+	for(var i=0;i<aa.length;i++){
+		aa[i].index = i;
+		aa[i].onclick=function(){
+			for(var j=0;j<dd.length;j++){
+				dd[j].style.display = 'none';
+			}
+			dd[this.index].style.display="block";
+		}
+	}
+</script>
 </html>

@@ -17,7 +17,7 @@
 	<div class="meeting">
 		<div class="swiper-container">
 	        <div class="swiper-wrapper">
-	            <div class="swiper-slide"><img src="images/main.jpg" alt=""><p>文字文字文字文字文字文字文字文字文字文字文字文字</p></div>
+	            <div class="swiper-slide"><img src="images/main.jpg" alt=""><p>文字文字文字</p></div>
 	            <div class="swiper-slide"><img src="images/main.jpg" alt=""><p>文字文字文字</p></div>
 	            <div class="swiper-slide"><img src="images/main.jpg" alt=""><p>文字文字文字</p></div>
 	            <div class="swiper-slide"><img src="images/main.jpg" alt=""><p>文字文字文字</p></div>
@@ -36,6 +36,8 @@
 	        </div>
 	        <!-- Add Pagination -->
 	        <!-- <div class="swiper-pagination"></div> -->
+	        <div class="swiper-button-next"></div>
+        	<div class="swiper-button-prev"></div>
    		</div>
 	</div>
 	<div  class="alert"></div>
@@ -53,35 +55,57 @@
 		<li><a href="join.html"><i class="i"></i>我要参与</a></li>
 		<li><a href="zhao.html"><i class="j"></i>感知拍照</a></li>
 	</ul>
+	<div class="v-list">
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+		<div class="list-child"><img src="images/dang.jpg" alt=""><p>文字文字文字</p></div>
+	</div>
 </body>
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
 <script>
 	var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
+        // pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
         slidesPerView: 3,
         slidesPerColumn: 2,
         paginationClickable: true,
         spaceBetween: 30
     });
 
-    var mv = document.querySelectorAll('.meeting .swiper-slide');
+	var mv = document.querySelectorAll('.meeting .swiper-slide');
+	var v = document.querySelector('.v-list');
+	for(var i=0;i<mv.length;i++){
+	  	mv[i].index = i;
+		mv[i].onclick=function(){
+			v.style.display='block';
+		}
+	};
+
+   	var child = document.querySelectorAll('.v-list .list-child');
     var alert = document.querySelector('.alert');
     var err = document.querySelector('.err');
     var gray = document.querySelector('.gray');
-    for(var i=0;i<mv.length;i++){
-    	mv[i].index = i;
-		mv[i].onclick=function(){
+    for(var i=0;i<child.length;i++){
+    	child[i].index = i;
+		child[i].onclick=function(){
 			alert.style.display='block';
 			err.style.display='block';
 			gray.style.display='block';
 		}
-    }
+    };
     err.onclick=function(){
     	alert.style.display='none';
 		err.style.display='none';
 		gray.style.display='none';
-    }
+    };
 </script>
 </html>

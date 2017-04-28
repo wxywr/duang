@@ -2,13 +2,15 @@ $(function(){
 	$('.round li').eq(0).css('background','#3d3b37').siblings().css('background','#c9c9c9');
 	$('.hots p').eq(0).css('color','#cc0100').siblings().css('color','#333');
 	$('.seven .lei').eq(0).css('color','#cc0100').siblings().css('color','#333');
-	$('.fc .fc-two').eq(0).css({'color':'#cc0100','fontWeight':'bold'}).siblings().css({'color':'#333','fontWeight':'normal'});
+	$('.fc .fc-two').eq(0).css({'color':'#cc0100','fontWeight':'bold','border':'2px dashed #ccc','borderWidth':'2px 0'}).siblings().css({'color':'#333','fontWeight':'normal','border':'none'});
 	$('.fcc div').eq(0).css('color','#cc0100').siblings().css('color','#333');
 	$('.fc-three').eq(0).css('color','#cc0100').siblings().css('color','#333');
 	$('.jzhi').eq(0).css('color','#cc0100').siblings().css('color','#333');
 	$('.yilin').eq(0).css('color','#cc0100').siblings().css('color','#333');
 	$('.chuang').eq(0).css('color','#cc0100').siblings().css('color','#333');
-
+	$('.djfc-list .lists').eq(0).css('color','#cc0100').siblings().css('color','#333');
+	$('.mapp').eq(0).css('color','#cc0100').siblings().css('color','#333');
+	
 	var n=0;
 	$('.fc-three').click(function(){
 		var index = $(this).index();
@@ -27,8 +29,8 @@ $(function(){
 		tabs();
 	})
 	function tabs(){
-		$('.fc-two').eq(m).css('color','#cc0100').siblings().css('color','#333');
-		$('.fcc .she').eq(m).css('display','block').siblings().css('display','none');
+		$('.fc-two').eq(m).css({'color':'#cc0100','fontWeight':'bold','border':'2px dashed #ccc','borderWidth':'2px 0'}).siblings().css({'color':'#333','fontWeight':'normal','border':'none'});
+		$('.fc-bai .four').eq(m).css('display','block').siblings().css('display','none');
 	}
 
 	var s=0;
@@ -75,4 +77,78 @@ $(function(){
 		$('.nine').eq(p).css('display','block').siblings().css('display','none');
 	}
 
-})
+	$('.mapp').click(function(){
+		var index = $(this).index();
+		$('.mapp').eq(index).css('color','#cc0100').siblings().css('color','#333');
+	})
+
+	var w=0;
+	$('.djfc-list .lists').click(function(){
+		var index = $(this).index();
+		w=index;
+		tabssssaa();
+	})
+	function tabssssaa(){
+		$('.djfc-list .lists').eq(w).css('color','#cc0100').siblings().css('color','#333');
+		$('.keji .kejis').eq(w).css('display','block').siblings().css('display','none');
+	}
+
+	// -----------党建地图
+	$(".map-list .list-a .lun li").eq(0).css('backgroundColor','#333');
+	$(".map-list .list-b .lun li").eq(0).css('backgroundColor','#333');
+	var r=0;
+	$(".map-list .list-a .lun li").click(function(){
+		var index=$(this).index();
+		 	r=index;
+			lunbo();
+	})
+	function lunbo(){
+		$(".map-list .list-a .lun li").eq(r).css('backgroundColor','#333');
+		$(".map-list .list-a .lun li").eq(r).siblings().css('backgroundColor','#ccc');
+		$('.map-list .list-a .lun .img img').eq(r).hide();
+		$('.map-list .list-a .lun .img img').eq(r).siblings().show();
+	}
+
+	$(".map-list .list-a .lun .left").click(function(){
+		r--;
+		lunbo();
+		if(r<=0){
+			r=2;
+		}
+	})
+	$(".map-list .list-a .lun .right").click(function(){
+		r++;
+		lunbo();
+		if(r>=1){
+			r=-1;
+		}
+	})
+
+	var rr=0;
+	$(".map-list .list-b .lun li").click(function(){
+		var index=$(this).index();
+		 	rr=index;
+			lunboo();
+	})
+	function lunboo(){
+		$(".map-list .list-b .lun li").eq(rr).css('backgroundColor','#333');
+		$(".map-list .list-b .lun li").eq(rr).siblings().css('backgroundColor','#ccc');
+		$('.map-list .list-b .lun .img img').eq(rr).hide();
+		$('.map-list .list-b .lun .img img').eq(rr).siblings().show();
+	}
+
+	$(".map-list .list-b .lun .left").click(function(){
+		rr--;
+		lunboo();
+		if(rr<=0){
+			rr=2;
+		}
+	})
+	$(".map-list .list-b .lun .right").click(function(){
+		rr++;
+		lunboo();
+		if(rr>=1){
+			rr=-1;
+		}
+	})
+});
