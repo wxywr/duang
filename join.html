@@ -3,6 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>我要参与</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/all.css">
 </head>
 <body style="background-image: url(images/bg.jpg);">
@@ -14,8 +16,27 @@
 		</div>
 	</div>
 	<div class="join-content">
-		<img src="images/join-1.jpg" alt="">
+		<div class="swiper-container">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide"><img src="images/j-01.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-02.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-03.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-04.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-05.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-06.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-07.jpg" alt=""></div>
+	            <div class="swiper-slide"><img src="images/j-08.jpg" alt=""></div>
+	        </div>
+	        <!-- Add Pagination -->
+	        <div class="swiper-pagination"></div>
+    	</div>
+    	<div class="words">易拉宝1，易拉宝2，易拉宝3，【创业五角场】五角场地区一周主要创业活动汇总，【2017年五角场街道“五角场杯”羽毛球比赛】，【缘聚·説乎俱乐部】精彩预告 当婚姻遇到房子——从法律角度看待二手房买卖风险，【魅力文化】一周精彩活动预告，邀你一起与春天继续high翻天，【互联网企业党建工作创新基地】心理疏导减压课程来了，小伙伴们约起来～</div>
 	</div>
+	<div class="join-alert"></div>
+	<div class="join-pic">
+		<img src="images/j-1.png" alt="" class="animated slideInDown">
+	</div>
+	<div class="join-wro"><img src="images/close.png" alt=""></div>
 	<ul class="list">
 		<li><a href="index.html"><i class="a"></i>首页</a></li>
 		<li><a href="style.html"><i class="b"></i>党建风采</a></li>
@@ -29,5 +50,52 @@
 		<li><a href="zhao.html"><i class="j"></i>感知拍照</a></li>
 	</ul>
 </body>
+<script type="text/javascript" src="js/swiper.min.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/tab.js"></script>
+
+<script>
+	var swipers = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        slidesPerView: 4,
+        spaceBetween: 50,
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            },
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10
+            }
+        }
+    });
+
+	var tu = document.querySelectorAll('.join-content div');
+	var alt = document.querySelector('.join-alert');
+	var pic = document.querySelector('.join-pic');
+	var wro = document.querySelector('.join-wro');
+    for(var j=0;j<tu.length;j++){
+		tu[j].onclick=function(){
+			alt.style.display='block';
+			pic.style.display='block';
+			wro.style.display='block';
+		}
+	}
+	wro.onclick=function(){
+		alt.style.display='none';
+		pic.style.display='none';
+		wro.style.display='none';
+	}
+</script>
 </html>

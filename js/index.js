@@ -45,18 +45,18 @@ window.onload=function(){
 		}
 	}
 
-	var ff = document.getElementsByClassName('fc');
-	var fv = document.querySelectorAll('.five div');
-	var fb = document.getElementsByClassName('fc-bai');
-	var ffs = document.getElementsByClassName('fcc');
-	for(var i=0;i<fv.length;i++){
-		fv[i].index=i;
-		fv[i].onclick=function(){
-			ff[0].style.display='block';
-			fb[0].style.display='block';
-			ffs[0].style.display='block';
-		}
-	}
+	// var ff = document.getElementsByClassName('fc');
+	// var fv = document.querySelectorAll('.five div');
+	// var fb = document.getElementsByClassName('fc-bai');
+	// var ffs = document.getElementsByClassName('fcc');
+	// for(var i=0;i<fv.length;i++){
+	// 	fv[i].index=i;
+	// 	fv[i].onclick=function(){
+	// 		ff[0].style.display='block';
+	// 		fb[0].style.display='block';
+	// 		ffs[0].style.display='block';
+	// 	}
+	// }
 
 	var cen = document.getElementsByClassName('center');
 	var uu = document.getElementsByClassName('tuu');
