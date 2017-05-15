@@ -1468,10 +1468,10 @@ img{
 	line-height: 99px;
 	background-color: #16A6D3;
 	border-radius: 15px;
-	background-image: url(../images/zhao.png);
+	background-image: url(../images/paii.png);
 	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	background-size: 20%;
+	background-position: 155px 15px;
+	background-size: 23%;
 }
 
 .Photograph .p-left .l-under .under-b{
@@ -1527,10 +1527,13 @@ img{
 }
 .Photograph .p-right .bg .bg-img div{
 	width: 185px;
-	height: 125px;
+	height: 130px;
 	background-color: #ccc;
 	margin: 10px 8px 10px 5px;
 	float: left;
+}
+.Photograph .p-right .bg .bg-img div img{
+	height: 100%;
 }
 .Photograph .p-right .r-under{
 	overflow: hidden;

@@ -322,7 +322,7 @@ $(function(){
 	})
 
 	$('.bg-img div').click(function(){
-		$(this).css('border','3px solid red ').siblings().css('border','none');
+		$(this).css('border','3px solid red').siblings().css('border','none');
 	})
 
 	$('.tan .close-img').click(function(){
@@ -340,89 +340,120 @@ $(function(){
 	// 	$('.view .people').animate({left:'1450px'},1500);
 	// })
 	$('.view .yi').click(function(){
-		$('.view .people').animate({left:'200px'},2000);
+		$('.view .people').animate({left:'200px'},1000);
 		$('.view .one').css({'color':'#0199FD'}).siblings().css('color','#333');
 	})
 	$('.view .tu').click(function(){
-		$('.view .people').animate({left:'830px'},2000);
+		$('.view .people').animate({left:'830px'},1000);
 		$('.view .two').css({'color':'#0199FD'}).siblings().css('color','#333');
 	})
 	$('.view .sa').click(function(){
-		$('.view .people').animate({left:'1450px'},2000);
+		$('.view .people').animate({left:'1450px'},1000);
 		$('.view .three').css({'color':'#0199FD'}).siblings().css('color','#333');
 	})
 	
 	//创智坊社区睦邻中心
 	//----------1F
 	$('.floor-aa').click(function(){
-		$('.tan').css('display','block');
-		$('.see-j').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-j').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-ab').click(function(){
-		$('.tan').css('display','block');
-		$('.see-i').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-i').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-ac').click(function(){
-		$('.tan').css('display','block');
-		$('.see-k').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-k').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-ad').click(function(){
-		$('.tan').css('display','block');
-		$('.see-b').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-b').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-ae').click(function(){
-		$('.tan').css('display','block');
-		$('.see-d').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-d').css('display','block').siblings().css('display','none');
+		},1000)
+		
 	})
 	//----------2F
 	$('.floor-ba').click(function(){
-		$('.tan').css('display','block');
-		$('.see-c').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-c').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-bb').click(function(){
-		$('.tan').css('display','block');
-		$('.see-e').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-e').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-bc').click(function(){
-		$('.tan').css('display','block');
-		$('.see-p').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-p').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	// $('.floor-bd').click(function(){
 	// 	$('.tan').css('display','block');
 	// 	$('.see-p').css('display','block').siblings().css('display','none');
 	// })
 	$('.floor-be').click(function(){
-		$('.tan').css('display','block');
-		$('.see-a').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-a').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	// $('.floor-bf').click(function(){
 	// 	$('.tan').css('display','block');
 	// 	$('.see-f').css('display','block').siblings().css('display','none');
 	// })
 	$('.floor-bg').click(function(){
-		$('.tan').css('display','block');
-		$('.see-f').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-f').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	//----------3F
 	$('.floor-ca').click(function(){
-		$('.tan').css('display','block');
-		$('.see-n').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-n').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-cb').click(function(){
-		$('.tan').css('display','block');
-		$('.see-o').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-o').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-cc').click(function(){
-		$('.tan').css('display','block');
-		$('.see-g').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-g').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-cd').click(function(){
-		$('.tan').css('display','block');
-		$('.see-h').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-h').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 	$('.floor-ce').click(function(){
-		$('.tan').css('display','block');
-		$('.see-m').css('display','block').siblings().css('display','none');
+		setTimeout(function(){
+			$('.tan').css('display','block');
+			$('.see-m').css('display','block').siblings().css('display','none');
+		},1000)
 	})
 
 	// 我爱阅读

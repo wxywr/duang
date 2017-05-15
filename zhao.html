@@ -205,29 +205,17 @@
     	v.style.display='none';
     }
 
-    // 点击楼层切换颜色
-    // var p = document.querySelectorAll('.view p');
-   	// for(var i=0;i<p.length;i++){
-   	// 	p[i].index = i;
-   	// 	p[i].onclick=function(){
-	   // 		for(var j=0;j<p.length;j++){
-	   // 			p[j].style.color='#333';	
-	   // 		}
-	   // 		this.style.color='#0199fd';	
-	   // 	}
-   	// }
-
    	// var n = 0;
-    // var un = document.querySelector('.p-left .under-a');
-    // un.onclick=function(){
-    //     if(this.style.backgroundPosition=='-20px 1px'){
-    //         this.style.backgroundPosition='1px 1px';
-    //         n=1;
-    //     }else{
-    //         this.style.backgroundPosition='-20px 1px';
-    //         n=0;
-    //     }
-    // }
+    var ua = document.querySelector('.p-left .under-a');
+    ua.onclick=function(){
+        if(this.style.backgroundPosition=='155px -95px'){
+            this.style.backgroundPosition='155px 15px';
+            // n=1;
+        }else{
+            this.style.backgroundPosition='155px -95px';
+            // n=0;
+        }
+    }
 
 </script>
 </html>
